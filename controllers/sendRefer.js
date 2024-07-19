@@ -44,17 +44,16 @@ const sendRefer = async (req, res) => {
         });
 
         const transporter = nodemailer.createTransport({
-            host: 'smtp.ethereal.email',
-            port: 587,
+            service : 'gmail',
             auth: {
-                user: 'danial.senger49@ethereal.email',
-                pass: 'YGHEyRGsrzJ7aDRwG3'
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS
             }
         });
 
         const mailOptions = {
-            from: process.env.GMAIL_USER,
-            to: refereeEmail,
+            from: process.env.EMAIL_USER,
+            to: `${refereeEmail}`,
             subject: `Referral for ${courseName}`,
             text: `Hi ${refereeName},\n\n${referrerName} has referred you for the course ${courseName}.\n\nBest regards,\nYour Company`,
         };
