@@ -10,10 +10,15 @@ generator client {
 
 model Referral {
   id            Int      @id @default(autoincrement())
-  referrerName  String
-  referrerEmail String
-  refereeName   String
-  refereeEmail  String
-  courseName    String?
+  referrerName  String   @db.VarChar(50)
+  referrerEmail String   @db.VarChar(150)
+  refereeName   String   @db.VarChar(50)
+  refereeEmail  String   @db.VarChar(150)
+  courseName    String?  @db.VarChar(150)
   createdAt     DateTime @default(now())
+
+  @@unique([referrerEmail , refereeEmail])
+  @@index([referrerEmail])
+  @@index([refereeEmail])
+
 }
