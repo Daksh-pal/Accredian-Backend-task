@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-  "prisma": "prisma generate",
+  "prisma": "prisma/schema.prisma",
   "start": "node index.js"
   },
   "keywords": [],
