@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
   "prisma": "prisma/schema.prisma",
-  "start": "node index.js"
+  "start": "node index.js",
+  "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
