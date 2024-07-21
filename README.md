@@ -1,8 +1,8 @@
 
 # Refer and Earn Backend setup
 
-Step-1) Open terminal and go to directory Backend.
-Step-2) Install all the dependencies.
+Open terminal and go to directory Backend.
+Install all the dependencies.
 
 
 ## Installation
